@@ -15,7 +15,9 @@ function App() {
       if (count === 0){
           alert("Value can't go below 0")
       }
-      setCount(count - 1)
+      else{
+          setCount(count - 1)
+      }
   }
 
 //For user 2  
@@ -25,8 +27,9 @@ const increaseValue1 = () => {
 const decreaseValue1 = () => {
     if (icount === 0){
         alert("Value can't go below 0")
+    }else{
+        setIcount(icount - 1)
     }
-    setIcount(icount - 1)
 }
 
   return (
@@ -34,24 +37,29 @@ const decreaseValue1 = () => {
       <Counter 
       user='1' 
       className="App1"
-      increaseValue={()=>increaseValue}
-      decreaseValue={()=>decreaseValue}
+      increaseValue={increaseValue}
+      decreaseValue={decreaseValue}
       count = {count}
       />
       <p>
+        <b>
         {
-          count>icount ? 
-          `User1 is > User2 ${count - icount}` 
-          : 
-          `User2 is > User1 ${icount - count}` 
+          count > icount ?
+            <p>User1 is greater than User2 by {count - icount}</p>
+            :
+            count === icount ?
+              <p>User2 is equal User1</p>
+              :
+            <p>User2 is greater than User1 by {icount - count}</p>
         }
+        </b>
       </p>
       <User2Counter
       icount = {icount}
       user='2'
       className="App2"
-      increaseValue={()=>increaseValue1}
-      decreaseValue={()=>decreaseValue1}
+      increaseValue={increaseValue1}
+      decreaseValue={decreaseValue1}
       />
     </div>
   );
