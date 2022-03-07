@@ -6,8 +6,10 @@
 .App1 {
   padding-left: 100px;
   padding-left: 200px;
+  color:cadetblue
 }
 
 .App2{
   padding-right: 200px;
+  color: red;
 }

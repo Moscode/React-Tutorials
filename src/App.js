@@ -41,16 +41,16 @@ const decreaseValue1 = () => {
       decreaseValue={decreaseValue}
       count = {count}
       />
-      <p>
+      <p style={{color: 'aqua', fontSize:'25px'}}>
         <b>
         {
           count > icount ?
-            <p>User1 is greater than User2 by {count - icount}</p>
+            <p>User1 Value is greater than User2 Value by {count - icount}</p>
             :
             count === icount ?
-              <p>User2 is equal User1</p>
+              <p>User2 Value is equal to User1 Value</p>
               :
-            <p>User2 is greater than User1 by {icount - count}</p>
+            <p>User2 Value is greater than User1 Value by {icount - count}</p>
         }
         </b>
       </p>
